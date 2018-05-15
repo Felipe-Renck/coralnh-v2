@@ -1,0 +1,29 @@
+<div class="wrapper">
+    <div class="page-header" style="background-image: url('../assets/img/coralnh/background_1.jpg');">
+        <div class="filter"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+                        <div class="card card-register">
+                            <h3 class="title">Bem Vindo</h3>
+                            <form class="register-form"> 
+                                <label>Email</label>
+                                <input required type="email" [(ngModel)]="loginUser.Email" name="Email" class="form-control" placeholder="Email">
+
+                                <label>Senha</label>
+                                <input required type="password" [(ngModel)]="loginUser.Password" name="Password" class="form-control" placeholder="Senha">
+
+                                <button type="submit" class="btn btn-warning btn-block btn-round" (click)="login()">Entrar</button>
+                            </form>
+                            <!-- <div class="forgot">
+                                <a href="#" class="btn btn-link btn-danger">Forgot password?</a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="footer register-footer text-center">
+                    © {{dateNow | date: 'yyyy'}}, Coral Jovem de Novo Hamburgo <i class="fa fa-music"></i> 
+                </div>
+            </div>
+    </div>
+</div>

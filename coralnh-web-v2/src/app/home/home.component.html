@@ -1,0 +1,182 @@
+<div class="page-header" data-parallax="true" style="background-image: url('../assets/img/coralnh/background_1.jpg');">
+    <div class="filter"></div>
+    <div class="container">
+        <div class="motto text-center">
+            <h1>Seja bem vindo</h1>
+            <h3>Coral Jovem de Novo Hamburgo</h3>
+            <br />
+            <a href="spotify:artist:7ec9N1DHWwqnjWX9vG0yhM" class="btn btn-outline-neutral btn-round">
+                <i class="fa fa-play"></i>Ouça no Spotify</a>
+            <button type="button" class="btn btn-outline-neutral btn-round" onclick="$(window).scrollTop($('.landing-section').offset().top);">Entre em Contato</button>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mr-auto ml-auto">
+                    <h2 class="title">O Coral</h2>
+                    <h5 class="description">
+
+                        O Coral Jovem de Novo Hamburgo está há mais de 20 anos louvando e engrandecendo o nome de Deus. Com uma história iniciada
+                        em 1996, já gravou três CDs e participou em outras duas coletâneas cristãs. Com mais de 100 vozes
+                        compondo o grupo, foi criado com o objetivo de envolver os jovens da Igreja Adventista Central de
+                        Novo Hamburgo e região na missão de levar a Palavra de Deus por meio da música. Com a realização
+                        deste ministério, rendemos toda a honra, glória e gratidão a Deus, que nos permite usar nossas vozes
+                        para Seu louvor. Nosso maior desejo é aproximar as pessoas de Cristo e, assim, ficarmos mais perto
+                        do Céu!
+
+                    </h5>
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mr-auto ml-auto">
+                    <div class="card page-carousel">
+                        <ngb-carousel>
+                            <ng-template ngbSlide>
+                                <img src="../assets/img/coralnh/carousel_1.jpg" alt="Random first slide">
+                                <div class="carousel-caption">
+                                    <p>Páscoa - Gramado - 2018</p>
+                                </div>
+                            </ng-template>
+                            <ng-template ngbSlide>
+                                <img src="../assets/img/coralnh/carousel_2.jpg" alt="Random second slide">
+                                <div class="carousel-caption">
+                                    <p>Igreja Adventista do Sétimo Dia - Novo Hamburgo</p>
+                                </div>
+                            </ng-template>
+                            <ng-template ngbSlide>
+                                <img src="../assets/img/coralnh/carousel_3.jpg" alt="Random third slide">
+                                <div class="carousel-caption">
+                                    <p>Natal Luz - Gramado - 2017</p>
+                                </div>
+                            </ng-template>
+                        </ngb-carousel>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <br/>
+        </div>
+
+    </div>
+
+    <div class="section section-dark text-center">
+        <div class="container">
+            <h2 class="title">Alguns membros de nossa grande equipe...</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card card-profile card-plain">
+                        <div class="card-avatar">
+                            <a href="#avatar">
+                                <img src="../assets/img/faces/betinho.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="card-block">
+                            <a href="#paper-kit">
+                                <div class="author">
+                                    <h4 class="card-title">Gilberto Amaral</h4>
+                                    <h6 class="card-category">Regente</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card card-profile card-plain">
+                        <div class="card-avatar">
+                            <a href="#avatar">
+                                <img src="../assets/img/faces/juliana.png" alt="...">
+                            </a>
+                        </div>
+                        <div class="card-block">
+                            <a href="#paper-kit">
+                                <div class="author">
+                                    <h4 class="card-title">Juliana Munhoz</h4>
+                                    <h6 class="card-category">Diretora</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="card card-profile card-plain">
+                        <div class="card-avatar">
+                            <a href="#avatar">
+                                <img src="../assets/img/faces/david.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="card-block">
+                            <a href="#paper-kit">
+                                <div class="author">
+                                    <h4 class="card-title">David Sturzbecher</h4>
+                                    <h6 class="card-category">Vice Diretor</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card card-profile card-plain">
+                        <div class="card-avatar">
+                            <a href="#avatar">
+                                <img src="../assets/img/faces/renato.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="card-block">
+                            <a href="#paper-kit">
+                                <div class="author">
+                                    <h4 class="card-title">Renato Maciel</h4>
+                                    <h6 class="card-category">Ancião</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section landing-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mr-auto ml-auto">
+                    <h2 class="text-center">Deseja entrar em contato?</h2>
+                    <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Nome</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Nome" name="name" [(ngModel)]="contato.name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Email</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Email" name="email" [(ngModel)]="contato.email">
+                                </div>
+                            </div>
+                        </div>
+
+                        <label>Assunto</label>
+                        <input type="text" class="form-control" placeholder="Assunto" name="subject" [(ngModel)]="contato.subject">
+
+                        <label>Mensagem</label>
+                        <textarea class="form-control" rows="4" placeholder="Fale com a gente..." name="message" [(ngModel)]="contato.message"></textarea>
+                        <div class="row">
+                            <div class="col-md-4 mr-auto ml-auto">
+                                <button type="submit" class="btn btn-info btn-lg btn-fill">Enviar mensagem</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
