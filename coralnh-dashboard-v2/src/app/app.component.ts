@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
-declare var $:any;
+declare var $: any;
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,15 @@ declare var $:any;
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent{}
+export class AppComponent {
+  username: string;
+  token: string;
+  
+  constructor(private route: ActivatedRoute, private router: Router) {
+  }
+
+  ngOnInit() {
+  }
+}
+
+

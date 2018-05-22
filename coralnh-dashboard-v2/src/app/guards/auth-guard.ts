@@ -6,11 +6,25 @@ import { LoginService } from '../services/login.service';
 @Injectable()
 export class AuthGuard implements CanActivate {
 
+  username: string;
+  token: string;
   IsAuthenticated: boolean = false;
 
-  constructor(private route: ActivatedRoute, private loginService: LoginService) { }
+  constructor(private route: ActivatedRoute, private loginService: LoginService) {
+  }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
+    debugger;
+
+    if (this.username == null || this.username == undefined) {
+      this.username = route.queryParams.username;
+    }
+    if (this.token == null || this.token == undefined) {
+      this.token = route.queryParams.token;
+    }
+
+    this.getAuthenticationParameters();
+
     this.loginService.verifyToken(localStorage.getItem('token')).then(res => this.verifyIfTokenIsValid(res)).catch(res => this.verifyIfTokenIsValid(res));
 
     return this.IsAuthenticated;
@@ -25,4 +39,12 @@ export class AuthGuard implements CanActivate {
       this.IsAuthenticated = true;
     }
   }
+
+  getAuthenticationParameters() {
+    debugger;
+    localStorage.setItem('token', this.token);
+    localStorage.setItem('username', this.username);
+  }
+
+
 }

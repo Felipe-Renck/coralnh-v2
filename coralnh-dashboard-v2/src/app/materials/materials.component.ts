@@ -16,8 +16,8 @@ export class MaterialsComponent implements OnInit {
 
   verifyIfTokenIsValid = function(res){
     if (res.message == "IsAExpiredToken") {
-      // window.location.href = 'http://localhost:4200/login';
-      window.location.href = 'https://coral.jovensnh.com.br/login';
+      window.location.href = 'http://localhost:4200/login';
+      // window.location.href = 'https://coral.jovensnh.com.br/login';
     }
   }
 
