@@ -10,6 +10,8 @@ import { NotificationsComponent }   from './notifications/notifications.componen
 import { UpgradeComponent }   from './upgrade/upgrade.component';
 import { MaterialsComponent } from './materials/materials.component';
 import { AuthGuard } from './guards/auth-guard';
+import { ListachamadaComponent } from './listachamada/listachamada.component';
+import { ChamadaComponent } from './chamada/chamada.component';
 
 export const AppRoutes: Routes = [
     {
@@ -61,6 +63,16 @@ export const AppRoutes: Routes = [
     {
         path: 'materials',
         component: MaterialsComponent,
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'listachamada',
+        component: ListachamadaComponent,
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'chamada',
+        component: ChamadaComponent,
         canActivate: [AuthGuard]
     }
 

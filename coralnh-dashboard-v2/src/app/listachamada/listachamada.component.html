@@ -1,0 +1,61 @@
+<!-- 
+
+  Botoes:
+
+  Nova chamada - cria nova chamada no banco de dados com a data atual.
+  Chamada - redireciona para  a rota chamada. queryparams: fazerChamada, ObjectID
+  Exibir - redireciona para a rota chamada. queryparams: exibirChamada, ObjectID
+  Excluir - exibe mensagem de confirmação (pode ser alert), após confirmação exclui a chamada do banco de dados.
+
+ -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default" style="background: none;border:none;box-shadow: none">
+        <button type="button" class="btn btn-md btn-primary button-add">Nova chamada</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="header">
+          <h4 class="title">Chamadas</h4>
+          <p class="category">Listas de chamadas feitas até o momento</p>
+        </div>
+        <div class="content table-responsive table-full-width">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01/06/2018</td>
+                <td>
+                  <a [routerLink]="['/chamada']" [queryParams]="{type: 'fazerChamada'}" class="btn btn-sm btn-dark button-command-table">Chamada</a>
+                  <a [routerLink]="['/chamada']" [queryParams]="{type: 'exibirChamada'}" class="btn btn-sm btn-primary button-command-table">Exibir</a>
+                  <a class="btn btn-sm btn-danger button-command-table">Excluir</a>
+                </td>
+              </tr>
+              <tr>
+                <td>02/06/2018</td>
+                <td>
+                  <a [routerLink]="['/chamada']" [queryParams]="{type: 'fazerChamada'}" class="btn btn-sm btn-dark button-command-table">Chamada</a>
+                  <a [routerLink]="['/chamada']" [queryParams]="{type: 'exibirChamada'}" class="btn btn-sm btn-primary button-command-table">Exibir</a>
+                  <a class="btn btn-sm btn-danger button-command-table">Excluir</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

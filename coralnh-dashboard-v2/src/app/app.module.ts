@@ -23,6 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { LoginService } from './services/login.service';
 import { AuthGuard } from './guards/auth-guard';
+import { ListachamadaComponent } from './listachamada/listachamada.component';
+import { ChamadaComponent } from './chamada/chamada.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { AuthGuard } from './guards/auth-guard';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
-    MaterialsComponent 
+    MaterialsComponent,
+    ListachamadaComponent,
+    ChamadaComponent 
   ],
   imports: [
     BrowserModule,

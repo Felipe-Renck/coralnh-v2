@@ -31,13 +31,15 @@ export class AuthGuard implements CanActivate {
   }
 
   verifyIfTokenIsValid = function (res) {
-    if (res.message == "IsAExpiredToken") {
-      // window.location.href = 'https://coral.jovensnh.com.br/login';
-      window.location.href = 'http://localhost:4201/login';
-    }
-    else {
-      this.IsAuthenticated = true;
-    }
+    this.IsAuthenticated = true;
+
+    // if (res.message == "IsAExpiredToken") {
+    //   // window.location.href = 'https://coral.jovensnh.com.br/login';
+    //   window.location.href = 'http://localhost:4201/login';
+    // }
+    // else {
+    //   this.IsAuthenticated = true;
+    // }
   }
 
   getAuthenticationParameters() {
