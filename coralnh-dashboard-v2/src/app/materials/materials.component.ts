@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../services/login.service';
+import { ChamadaService } from '../services/chamada.service';
 
 @Component({
   selector: 'app-materials',
@@ -8,7 +9,7 @@ import { LoginService } from '../services/login.service';
 })
 export class MaterialsComponent implements OnInit {
 
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService, chamdaService: ChamadaService) { }
 
   ngOnInit() {
     this.loginService.verifyToken(localStorage.getItem('token')).then(res => this.verifyIfTokenIsValid(res)).catch(res => this.verifyIfTokenIsValid(res));

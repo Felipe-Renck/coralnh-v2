@@ -48,20 +48,13 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Fulano Beltrano Exemplo da Silva</td>
-                <td>
-                  <a class="btn btn-sm btn-success button-command-table">Presente</a>
-                  <a class="btn btn-sm btn-danger button-command-table">Ausente</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Sicrano Oliveira do Teste</td>
-                <td>
-                  <a class="btn btn-sm btn-success button-command-table">Presente</a>
-                  <a class="btn btn-sm btn-danger button-command-table">Ausente</a>
-                </td>
-              </tr>
+                <tr *ngFor="let user of users">
+                    <td>{{user.nome | uppercase}}</td>
+                    <td>
+                        <a class="btn btn-sm btn-success button-command-table">Presente</a>
+                        <a class="btn btn-sm btn-danger button-command-table">Ausente</a>
+                      </td>
+                </tr>
             </tbody>
           </table>
 

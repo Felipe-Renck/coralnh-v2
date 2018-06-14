@@ -22,6 +22,7 @@ import { MaterialsComponent } from './materials/materials.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { LoginService } from './services/login.service';
+import { ChamadaService } from './services/chamada.service';
 import { AuthGuard } from './guards/auth-guard';
 import { ListachamadaComponent } from './listachamada/listachamada.component';
 import { ChamadaComponent } from './chamada/chamada.component';
@@ -51,7 +52,7 @@ import { ChamadaComponent } from './chamada/chamada.component';
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'}),
     HttpClientModule
   ],
-  providers: [LoginService, AuthGuard],
+  providers: [LoginService, , ChamadaService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

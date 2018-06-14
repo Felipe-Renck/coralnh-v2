@@ -14,7 +14,6 @@ export class AuthGuard implements CanActivate {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
-    debugger;
 
     if (this.username == null || this.username == undefined) {
       this.username = route.queryParams.username;
@@ -43,7 +42,6 @@ export class AuthGuard implements CanActivate {
   }
 
   getAuthenticationParameters() {
-    debugger;
     localStorage.setItem('token', this.token);
     localStorage.setItem('username', this.username);
   }
